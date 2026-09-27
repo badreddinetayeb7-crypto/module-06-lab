@@ -90,11 +90,7 @@ async function subscribeEmailToSNSTopic(email) {
 }
 
 async function listSqsQueueURL() {
-  const response = await sqs.send(new ListQueuesCommand({}));
-  if (!response.QueueUrls || response.QueueUrls.length === 0) {
-    throw new Error('No SQS queue found.');
-  }
-  return response.QueueUrls[0];
+  return 'https://sqs.us-east-1.amazonaws.com/407708719081/tayb-module06-sqs';
 }
 
 async function sendMessageToQueue(recordID) {

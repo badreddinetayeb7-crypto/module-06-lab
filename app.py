@@ -24,13 +24,8 @@ responseDynamoTables = clientDynamo.list_tables()
 if TABLE_NAME not in responseDynamoTables.get('TableNames', []):
     raise RuntimeError(f'DynamoDB table {TABLE_NAME} was not found.')
 
-print('Getting a list of SQS queues...')
-responseURL = clientSQS.list_queues()
-queue_urls = responseURL.get('QueueUrls', [])
-if not queue_urls:
-    print('No SQS queues found.')
-    raise SystemExit(0)
-queue_url = queue_urls[0]
+print('Using Module 6 SQS queue...')
+queue_url = 'https://sqs.us-east-1.amazonaws.com/407708719081/tayb-module06-sqs'
 
 print('Retrieving one message from the queue...')
 responseMessages = clientSQS.receive_message(
