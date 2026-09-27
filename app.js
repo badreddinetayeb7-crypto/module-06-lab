@@ -45,7 +45,7 @@ const sns = new SNSClient({ region: REGION });
 
 async function getRawBucketName() {
   const result = await s3.send(new ListBucketsCommand({}));
-  const bucket = (result.Buckets || []).find((b) => b.Name && b.Name.includes('raw'));
+  const bucket = (result.Buckets || []).find((b) => b.Name === 'tayb-module06-raw-bucket-20260927');
   if (!bucket) throw new Error('No S3 bucket containing "raw" was found.');
   return bucket.Name;
 }

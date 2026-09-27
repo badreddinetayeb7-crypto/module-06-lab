@@ -76,8 +76,8 @@ key = url.path.lstrip('/')
 print('S3 Object Key name: ' + key)
 
 responseS3 = clientS3.list_buckets()
-raw_buckets = [b['Name'] for b in responseS3.get('Buckets', []) if 'raw' in b['Name']]
-finished_buckets = [b['Name'] for b in responseS3.get('Buckets', []) if 'finished' in b['Name']]
+raw_buckets = ['tayb-module06-raw-bucket-20260927']
+finished_buckets = ['tayb-module06-finished-bucket-20260927']
 if not raw_buckets or not finished_buckets:
     raise RuntimeError('Could not find both raw and finished S3 buckets.')
 
