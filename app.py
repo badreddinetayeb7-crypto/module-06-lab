@@ -4,7 +4,7 @@ from PIL import Image
 import logging
 from botocore.exceptions import ClientError
 from botocore.config import Config
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 
 # CHANGE THIS ONLY IF YOUR Terraform/AWS DEFAULT REGION IS DIFFERENT.
 region = 'us-east-1'
@@ -67,7 +67,7 @@ if not raw_url or raw_url == 'done':
 
 # Parse Raw S3 URL and determine object key.
 url = urlparse(raw_url)
-key = url.path.lstrip('/')
+key = unquote(url.path.lstrip('/'))
 print('S3 Object Key name: ' + key)
 
 responseS3 = clientS3.list_buckets()
