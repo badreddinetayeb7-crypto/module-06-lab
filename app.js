@@ -35,7 +35,7 @@ const ip = require('ip');
 //////////////////////////////////////////////////////////////////////////////
 // CHANGE THIS ONLY IF YOUR Terraform/AWS DEFAULT REGION IS DIFFERENT.
 //////////////////////////////////////////////////////////////////////////////
-const REGION = 'us-east-2';
+const REGION = 'us-east-1';
 const TABLE_NAME = 'company';
 
 const s3 = new S3Client({ region: REGION });

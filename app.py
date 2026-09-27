@@ -7,7 +7,7 @@ from botocore.config import Config
 from urllib.parse import urlparse
 
 # CHANGE THIS ONLY IF YOUR Terraform/AWS DEFAULT REGION IS DIFFERENT.
-region = 'us-east-2'
+region = 'us-east-1'
 TABLE_NAME = 'company'
 
 clientSQS = boto3.client('sqs', region_name=region)

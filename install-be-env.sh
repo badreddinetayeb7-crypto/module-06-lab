@@ -13,15 +13,15 @@ python3 -m pip install boto3
 
 cd /home/ubuntu
 
-# Command to clone your private repo via SSH usign the Private key
+# Clone the Module 6 GitHub repository over HTTPS
 ####################################################################
 # Note - change "hajek.git" to be your private repo name (hawk ID) #
 ####################################################################
-sudo -u ubuntu git clone git@github.com:YOUR_GITHUB_USERNAME/YOUR_REPOSITORY.git
+sudo -u ubuntu git clone https://github.com/badreddinetayeb7-crypto/module-06-lab.git
 
 # Start the nodejs app where it is located via PM2
 # https://pm2.keymetrics.io/docs/usage/quick-start
-cd /home/ubuntu/YOUR_REPOSITORY/YOUR_MODULE6_PATH
+cd /home/ubuntu/module-06-lab
 
 echo "Copying ./app.py to /usr/local/bin/..." 
 sudo cp ./app.py /usr/local/bin/

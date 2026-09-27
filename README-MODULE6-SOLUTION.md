@@ -15,7 +15,7 @@ This folder has the missing Module 6 code filled in for DynamoDB + SQS + SNS + S
    - region
    - any names you previously used.
 3. S3 bucket names are globally unique. The supplied names were changed to likely-unique names, but if AWS says a bucket already exists, change both bucket names in `terraform.tfvars`.
-4. `app.js`, `app.py`, `provider.tf`, and `terraform.tfvars` currently use `us-east-2`. If your class environment uses another region, change all of them to the same region.
+4. `app.js`, `app.py`, `provider.tf`, and `terraform.tfvars` currently use `us-east-1`. If your class environment uses another region, change all of them to the same region.
 
 ## What was completed
 
@@ -96,3 +96,17 @@ The expected target is **10/10**. Submit the generated `module-06-results.txt` f
 ## Important
 
 Do not rename `FINSIHEDS3URL` to a correctly spelled English name. The course test uses the misspelled form.
+
+
+## Current lab values (updated Sep 27, 2026)
+
+- Region: `us-east-1`
+- AMI: `ami-0d6706b99f85f1a04` (Ubuntu 22.04 image verified in us-east-1)
+- EC2 key pair: `module-05-key`
+- Current Terraform-managed security group: `sg-07e6e7579338a74ac`
+- GitHub repository: `https://github.com/badreddinetayeb7-crypto/module-06-lab.git`
+- Repository files are expected at the repository root (`/home/ubuntu/module-06-lab` after clone).
+- Terraform CLI credentials path in this Coursera container: `/home/coder/.aws/credentials`
+- S3 path-style access is enabled in `provider.tf` for this lab container.
+
+Do not commit AWS credentials, Terraform state files, the Terraform binary, the AWS CLI installer, or private key files to GitHub.
